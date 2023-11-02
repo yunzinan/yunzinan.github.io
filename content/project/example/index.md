@@ -1,12 +1,14 @@
 ---
-title: Example Project
-summary: An example of using the in-built project page.
+title: EEG-Based Brain-Computer Interaction in Virtual Reality
+summary: A National College Students’ Innovation training program.
 tags:
   - Deep Learning
-date: '2016-04-27T00:00:00Z'
+  - BCI
+  - VR
+date: '2023-10-19T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: ''
+external_link: 'https://bci-vr.yunzinan.top/'
 
 image:
   caption: Photo by rawpixel on Unsplash
