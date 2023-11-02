@@ -235,7 +235,7 @@ sections:
       title: Contact
       subtitle:
       text: |-
-        Feel free to contact me. 
+        Feel free to contact me if you have any questions. 😉
       # Contact (add or remove contact options as necessary)
       email: shen.ouy03@gmail.com
       phone: (+86) 133 7606 4311
