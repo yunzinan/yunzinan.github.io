@@ -52,7 +52,7 @@ sections:
       columns: '1'
   - block: experience
     content:
-      title: Experience
+      title: Research experience
       # Date format for experience
       #   Refer to https://wowchemy.com/docs/customization/#date-format
       date_format: Jan 2006
@@ -62,98 +62,98 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
+        - title: Research Intern
+          company: EEG-based BCI
           company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
+          # company_logo: org-gc
+          location: Nanjing
+          date_start: '2023-07-06'
           date_end: ''
           description: |2-
-              Responsibilities include:
-
-              * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
+              * A compulsory course for CS students that allows them to freely choose research directions and mentors based on their personal interests.
+              * Developing an understanding of the background and fundamental knowledge of brain-computer interfaces (BCIs) by engaging with the literature.
+              * Trying to master the fundamental EEG-based BCI techniques and learning to apply machine learning for signal analysis and recognition through project-based practice.
+              * Leading a National College Students’ Innovation training program.
+        - title: Machine Learning, Data Mining, AI Systems in Real Life Applications
+          company: North Carolina State University
           company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+          # company_logo: org-x
+          location: New York - Nanjing
+          date_start: '2024-01-21'
+          date_end: '2024-02-17'
+          description: using advanced machine learning algorithms such as deep learning models, reinforcement learning, and deep reinforcement learning to analyse interactive data.
+
     design:
       columns: '2'
-  - block: accomplishments
-    content:
-      # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
-      subtitle:
-      # Date format: https://wowchemy.com/docs/customization/#date-format
-      date_format: Jan 2006
-      # Accomplishments.
-      #   Add/remove as many `item` blocks below as you like.
-      #   `title`, `organization`, and `date_start` are the required parameters.
-      #   Leave other parameters empty if not required.
-      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-      items:
-        - certificate_url: https://www.coursera.org
-          date_end: ''
-          date_start: '2021-01-25'
-          description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
-          url: ''
-        - certificate_url: https://www.edx.org
-          date_end: ''
-          date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          icon: edx
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
-    design:
-      columns: '2'
-  - block: collection
-    id: posts
-    content:
-      title: Recent Posts
-      subtitle: ''
-      text: ''
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        folders:
-          - post
-        author: ""
-        category: ""
-        tag: ""
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ""
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: compact
-      columns: '2'
+  # - block: accomplishments
+  #   content:
+  #     # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
+  #     title: 'Accomplish&shy;ments'
+  #     subtitle:
+  #     # Date format: https://wowchemy.com/docs/customization/#date-format
+  #     date_format: Jan 2006
+  #     # Accomplishments.
+  #     #   Add/remove as many `item` blocks below as you like.
+  #     #   `title`, `organization`, and `date_start` are the required parameters.
+  #     #   Leave other parameters empty if not required.
+  #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+  #     items:
+  #       - certificate_url: https://www.coursera.org
+  #         date_end: ''
+  #         date_start: '2021-01-25'
+  #         description: ''
+  #         icon: coursera
+  #         organization: Coursera
+  #         organization_url: https://www.coursera.org
+  #         title: Neural Networks and Deep Learning
+  #         url: ''
+  #       - certificate_url: https://www.edx.org
+  #         date_end: ''
+  #         date_start: '2021-01-01'
+  #         description: Formulated informed blockchain models, hypotheses, and use cases.
+  #         icon: edx
+  #         organization: edX
+  #         organization_url: https://www.edx.org
+  #         title: Blockchain Fundamentals
+  #         url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+  #       - certificate_url: https://www.datacamp.com
+  #         date_end: '2020-12-21'
+  #         date_start: '2020-07-01'
+  #         description: ''
+  #         icon: datacamp
+  #         organization: DataCamp
+  #         organization_url: https://www.datacamp.com
+  #         title: 'Object-Oriented Programming in R'
+  #         url: ''
+  #   design:
+  #     columns: '2'
+  # - block: collection
+  #   id: posts
+  #   content:
+  #     title: Recent Posts
+  #     subtitle: ''
+  #     text: ''
+  #     # Choose how many pages you would like to display (0 = all pages)
+  #     count: 5
+  #     # Filter on criteria
+  #     filters:
+  #       folders:
+  #         - post
+  #       author: ""
+  #       category: ""
+  #       tag: ""
+  #       exclude_featured: false
+  #       exclude_future: false
+  #       exclude_past: false
+  #       publication_type: ""
+  #     # Choose how many pages you would like to offset by
+  #     offset: 0
+  #     # Page order: descending (desc) or ascending (asc) date.
+  #     order: desc
+  #   design:
+  #     # Choose a layout view
+  #     view: compact
+  #     columns: '2'
   - block: portfolio
     id: projects
     content:
@@ -181,93 +181,93 @@ sections:
       view: showcase
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
-  - block: markdown
-    content:
-      title: Gallery
-      subtitle: ''
-      text: |-
-        {{< gallery album="demo" >}}
-    design:
-      columns: '1'
-  - block: collection
-    id: featured
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      columns: '2'
-      view: card
-  - block: collection
-    content:
-      title: Recent Publications
-      text: |-
-        {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
-        {{% /callout %}}
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
-    design:
-      columns: '2'
-      view: compact
-  - block: tag_cloud
-    content:
-      title: Popular Topics
-    design:
-      columns: '2'
+  # - block: markdown
+  #   content:
+  #     title: Gallery
+  #     subtitle: ''
+  #     text: |-
+  #       {{< gallery album="demo" >}}
+  #   design:
+  #     columns: '1'
+  # - block: collection
+  #   id: featured
+  #   content:
+  #     title: Featured Publications
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true
+  #   design:
+  #     columns: '2'
+  #     view: card
+  # - block: collection
+  #   content:
+  #     title: Recent Publications
+  #     text: |-
+  #       {{% callout note %}}
+  #       Quickly discover relevant content by [filtering publications](./publication/).
+  #       {{% /callout %}}
+  #     filters:
+  #       folders:
+  #         - publication
+  #       exclude_featured: true
+  #   design:
+  #     columns: '2'
+  #     view: citation
+  # - block: collection
+  #   id: talks
+  #   content:
+  #     title: Recent & Upcoming Talks
+  #     filters:
+  #       folders:
+  #         - event
+  #   design:
+  #     columns: '2'
+  #     view: compact
+  # - block: tag_cloud
+  #   content:
+  #     title: Popular Topics
+  #   design:
+  #     columns: '2'
   - block: contact
     id: contact
     content:
       title: Contact
       subtitle:
       text: |-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
+        Feel free to contact me. 
       # Contact (add or remove contact options as necessary)
-      email: test@example.org
-      phone: 888 888 88 88
+      email: shen.ouy03@gmail.com
+      phone: (+86) 133 7606 4311
       appointment_url: 'https://calendly.com'
       address:
-        street: 450 Serra Mall
-        city: Stanford
-        region: CA
-        postcode: '94305'
-        country: United States
-        country_code: US
-      directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-      office_hours:
-        - 'Monday 10:00 to 13:00'
-        - 'Wednesday 09:00 to 10:00'
+        street: No.163 Xianlin Road, Qixia District
+        city: Nanjing
+        region: Jiangsu Province 
+        postcode: '210023'
+        country: China
+        country_code: CN
+      # directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+      # office_hours:
+      #   - 'Monday 10:00 to 13:00'
+      #   - 'Wednesday 09:00 to 10:00'
       # Choose a map provider in `params.yaml` to show a map from these coordinates
-      coordinates:
-        latitude: '37.4275'
-        longitude: '-122.1697'  
-      contact_links:
-        - icon: twitter
-          icon_pack: fab
-          name: DM Me
-          link: 'https://twitter.com/Twitter'
-        - icon: skype
-          icon_pack: fab
-          name: Skype Me
-          link: 'skype:echo123?call'
-        - icon: video
-          icon_pack: fas
-          name: Zoom Me
-          link: 'https://zoom.com'
+      # coordinates:
+      #   latitude: '37.4275'
+      #   longitude: '-122.1697'  
+      # contact_links:
+      #   - icon: twitter
+      #     icon_pack: fab
+      #     name: DM Me
+      #     link: 'https://twitter.com/Twitter'
+      #   - icon: skype
+      #     icon_pack: fab
+      #     name: Skype Me
+      #     link: 'skype:echo123?call'
+      #   - icon: video
+      #     icon_pack: fas
+      #     name: Zoom Me
+      #     link: 'https://zoom.com'
       # Automatically link email and phone or display as text?
       autolink: true
       # Email form provider
