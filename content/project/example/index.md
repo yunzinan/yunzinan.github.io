@@ -2,7 +2,7 @@
 title: EEG-Based Brain-Computer Interaction in Virtual Reality
 summary: A National College Students’ Innovation training program
 tags:
-  - Deep Learning
+  - ML
   - BCI
   - VR
 date: '2023-10-19T00:00:00Z'
