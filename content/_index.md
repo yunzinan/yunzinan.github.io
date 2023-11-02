@@ -62,10 +62,10 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Research Intern
-          company: EEG-based BCI
+        - title: EEG-based BCI
+          company: Software Institute in Nanjing University
           company_url: ''
-          # company_logo: org-gc
+          company_logo: ''
           location: Nanjing
           date_start: '2023-07-06'
           date_end: ''
@@ -77,7 +77,7 @@ sections:
         - title: Machine Learning, Data Mining, AI Systems in Real Life Applications
           company: North Carolina State University
           company_url: ''
-          # company_logo: org-x
+          company_logo: ''
           location: New York - Nanjing
           date_start: '2024-01-21'
           date_end: '2024-02-17'
@@ -239,7 +239,7 @@ sections:
       # Contact (add or remove contact options as necessary)
       email: shen.ouy03@gmail.com
       phone: (+86) 133 7606 4311
-      appointment_url: 'https://calendly.com'
+      # appointment_url: 'https://calendly.com'
       address:
         street: No.163 Xianlin Road, Qixia District
         city: Nanjing
