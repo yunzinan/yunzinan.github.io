@@ -78,7 +78,7 @@ sections:
           company: North Carolina State University
           company_url: ''
           company_logo: ''
-          location: New York - Nanjing
+          location: North Carolina - Nanjing
           date_start: '2024-01-21'
           date_end: '2024-02-17'
           description: using advanced machine learning algorithms such as deep learning models, reinforcement learning, and deep reinforcement learning to analyse interactive data.
