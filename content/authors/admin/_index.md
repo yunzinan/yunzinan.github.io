@@ -115,8 +115,8 @@ social:
   - icon: cv
     icon_pack: ai
     link: uploads/resume.pdf
-  - icon: fa-earth-americas
-    icon_pack: fas
+  - icon: dataverse
+    icon_pack: ai
     link: https://clustrmaps.com/site/1bxvm
 
 # Highlight the author in author lists? (true/false)
