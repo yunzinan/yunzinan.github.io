@@ -74,7 +74,7 @@ sections:
               * Developing an understanding of the background and fundamental knowledge of brain-computer interfaces (BCIs) by engaging with the literature.
               * Trying to master the fundamental EEG-based BCI techniques and learning to apply machine learning for signal analysis and recognition through project-based practice.
               * Leading a National College Students’ Innovation training program.
-        - title: Machine Learning, Data Mining, AI Systems in Real Life Applications
+        - title: "Machine Learning: Mathematical Foundation and Applications"
           company: North Carolina State University
           company_url: ''
           company_logo: ''
