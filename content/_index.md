@@ -243,7 +243,7 @@ sections:
       phone: (+86) 133 7606 4311
       # appointment_url: 'https://calendly.com'
       address:
-        street: No.163 Xianlin Road, Qixia District
+        street: No.163 Xianlin Road, Qixia District       <a href="http://www.clustrmaps.com/map/Yunzinan.top" title="Visit tracker for Yunzinan.top"><img src="//www.clustrmaps.com/map_v2.png?d=M9HxGk-HS6W9gxIzcVaqLqQpWLRZbqkyOjV6l0Slwp4" /></a>
         city: Nanjing
         region: Jiangsu Province 
         postcode: '210023'
@@ -283,4 +283,3 @@ sections:
     design:
       columns: '2'
 ---
-      <a href="http://www.clustrmaps.com/map/Yunzinan.top" title="Visit tracker for Yunzinan.top"><img src="//www.clustrmaps.com/map_v2.png?d=M9HxGk-HS6W9gxIzcVaqLqQpWLRZbqkyOjV6l0Slwp4" /></a>
