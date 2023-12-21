@@ -125,6 +125,5 @@ highlight_name: true
 
 I'm currently a 3rd year student of Computer Science at Nanjing University. I've been studying Chemistry and Computer Science for the past two years, after which I changed my major from Chemistry to CS. My research interests include but are not limited to BCI(brain-computer interface), Computational Neuroscience, and Machine Learning. I'm eager to find out how our brain works and establish the connection and interaction between the human brain and the computer.
 
-<a href="http://www.clustrmaps.com/map/Yunzinan.top" title="Visit tracker for Yunzinan.top"><img src="//www.clustrmaps.com/map_v2.png?d=M9HxGk-HS6W9gxIzcVaqLqQpWLRZbqkyOjV6l0Slwp4" /></a>
 
 {style="text-align: justify;"}
