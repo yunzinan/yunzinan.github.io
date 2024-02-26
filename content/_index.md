@@ -80,8 +80,10 @@ sections:
           company_logo: ''
           location: North Carolina - Nanjing
           date_start: '2024-01-21'
-          date_end: '2024-02-17'
-          description: using advanced machine learning algorithms such as deep learning models, reinforcement learning, and deep reinforcement learning to analyse interactive data.
+          date_end: '2024-02-25'
+          description: 
+              * Learn about the mathematical background of several supervised learning models.
+              * Apply several deep learning models(GRU/LSTM/EEG-Conformer) for EEG-based Emotion Recognition.
 
     design:
       columns: '2'
