@@ -81,7 +81,7 @@ sections:
           location: North Carolina - Nanjing
           date_start: '2024-01-21'
           date_end: '2024-02-25'
-          description: 
+          description: |2-
               * Learn about the mathematical background of several supervised learning models.
               * Apply several deep learning models(GRU/LSTM/EEG-Conformer) for EEG-based Emotion Recognition.
 
