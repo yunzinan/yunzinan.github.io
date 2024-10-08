@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 3rd year CS student.
+role: 4th year CS student.
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -25,7 +25,7 @@ organizations:
     url: https://www.nju.edu.cn/en/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include machine learning, computational neuroscience, brain computer interface.
+bio: My research interests include Software Analysis, Software Engineering, and Deep Learning. I used to do research about Brain Computer Interface.
 
 # Interests to show in About widget
 interests:
@@ -114,7 +114,7 @@ social:
   # and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: uploads/resume.pdf
+    link: uploads/CV.pdf
   - icon: dataverse
     icon_pack: ai
     link: https://clustrmaps.com/site/1bxvm
@@ -123,7 +123,7 @@ social:
 highlight_name: true
 ---
 
-I'm currently a 3rd year student of Computer Science at Nanjing University. I've been studying Chemistry and Computer Science for the past two years, after which I changed my major from Chemistry to CS. My research interests include but are not limited to BCI(brain-computer interface), Computational Neuroscience, and Machine Learning. I'm eager to find out how our brain works and establish the connection and interaction between the human brain and the computer.
+I'm currently a 4th year student of Computer Science at Nanjing University. I've been studying Chemistry and Computer Science for the past two years, after which I changed my major from Chemistry to CS. I have been admitted to pursue my Master degree at School of Software, Tsinghua University without entrance examination. I used to do Brain-Computer Interface research, now I mainly focus on Software Analysis and Software Engineering.
 
 
 {style="text-align: justify;"}
