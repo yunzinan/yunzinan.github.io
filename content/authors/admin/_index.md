@@ -25,7 +25,7 @@ organizations:
     url: https://www.nju.edu.cn/en/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include Software Analysis, Software Engineering, and Deep Learning. I used to do research about Brain Computer Interface.
+bio: My research interests include Software Engineering and Deep Learning. I used to do research about Brain Computer Interface.
 
 # Interests to show in About widget
 interests:
@@ -123,7 +123,7 @@ social:
 highlight_name: true
 ---
 
-I'm currently a 4th year student of Computer Science at Nanjing University. I've been studying Chemistry and Computer Science for the past two years, after which I changed my major from Chemistry to CS. I have been admitted to pursue my Master degree at School of Software, Tsinghua University without entrance examination. I used to do Brain-Computer Interface research, now I mainly focus on Software Analysis and Software Engineering.
+I'm currently a 4th year student of Computer Science at Nanjing University. I've been studying Chemistry and Computer Science for the past two years, after which I changed my major from Chemistry to CS. I have been admitted to pursue my Master degree at School of Software, Tsinghua University without entrance examination. I used to do Brain-Computer Interface research, now I mainly focus on Software Engineering and Machine Learning Applications.
 
 
 {style="text-align: justify;"}
