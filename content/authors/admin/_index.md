@@ -43,7 +43,7 @@ education:
     #   institution: Massachusetts Institute of Technology
     #   year: 2009
     - course: Software Engineering
-      instituion: School of Software, Tsinghua University
+      institution: School of Software, Tsinghua University
       year: 2028(expected)
 
     - course: BSc in Computer Science
