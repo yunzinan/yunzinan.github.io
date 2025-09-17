@@ -68,7 +68,7 @@ sections:
           company_logo: ''
           location: Nanjing
           date_start: '2023-07-06'
-          date_end: ''
+          date_end: '2024-07-06'
           description: |2-
               * A compulsory course for CS students that allows them to freely choose research directions and mentors based on their personal interests.
               * Developing an understanding of the background and fundamental knowledge of brain-computer interfaces (BCIs) by engaging with the literature.
@@ -245,10 +245,11 @@ sections:
       phone: (+86) 133 7606 4311
       # appointment_url: 'https://calendly.com'
       address:
-        street: No.163 Xianlin Road, Qixia District       <a href="http://www.clustrmaps.com/map/Yunzinan.top" title="Visit tracker for Yunzinan.top"><img src="//www.clustrmaps.com/map_v2.png?d=M9HxGk-HS6W9gxIzcVaqLqQpWLRZbqkyOjV6l0Slwp4" /></a>
-        city: Nanjing
-        region: Jiangsu Province 
-        postcode: '210023'
+        street: Tsinghua University, Haidian District 
+        city: Beijing 
+        region: 
+        postcode: 210023 <a href="http://www.clustrmaps.com/map/Yunzinan.top" title="Visit tracker for Yunzinan.top"><img src="//www.clustrmaps.com/map_v2.png?d=M9HxGk-HS6W9gxIzcVaqLqQpWLRZbqkyOjV6l0Slwp4" /></a>
+
         country: China
         country_code: CN
       # directions: Enter Building 1 and take the stairs to Office 200 on Floor 2

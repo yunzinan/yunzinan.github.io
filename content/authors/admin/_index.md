@@ -17,12 +17,12 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 4th year CS student.
+role: Everything we imagine will turn into reality.
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Nanjing University
-    url: https://www.nju.edu.cn/en/
+  - name: Tsinghua University
+    url: https://www.tsinghua.edu.cn/en/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include Software Engineering and Deep Learning. I used to do research about Brain Computer Interface.
@@ -42,9 +42,12 @@ education:
     # - course: MEng in Artificial Intelligence
     #   institution: Massachusetts Institute of Technology
     #   year: 2009
+    - course: Software Engineering
+      institutuion: School of Software, Tsinghua University
+      year: 2028(expected)
     - course: BSc in Computer Science
-      institution: Nanjing University
-      year: 2025(expected)
+      institution: School of Computer Science, Nanjing University
+      year: 2025
 
 # Skills
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
