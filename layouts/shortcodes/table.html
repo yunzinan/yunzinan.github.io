@@ -1,0 +1,48 @@
+{{- $path := .Get "path" | default (.Get 0) -}}
+{{- $hasHeader := (or (eq (.Get "header") "true") (eq (.Get "header") "1") (eq (.Get "header") true) (not (isset .Params "header"))) -}}
+{{- $caption := .Get "caption" -}}
+
+{{- if not $path -}}
+  {{- errorf "table shortcode: missing 'path' parameter (page: %q)" .Page.File.Path -}}
+{{- end -}}
+
+{{- $res := .Page.Resources.GetMatch $path -}}
+{{- if not $res -}}
+  {{- errorf "table shortcode: cannot find CSV resource %q in page bundle %q" $path .Page.File.Path -}}
+{{- end -}}
+
+{{- $rows := transform.Unmarshal (dict "delimiter" ",") $res.Content -}}
+{{- if lt (len $rows) 1 -}}
+  {{- /* Render an empty table to avoid build failure on empty CSV */ -}}
+  <table class="table"></table>
+  {{- return -}}
+{{- end -}}
+
+<div class="table-responsive">
+  <table class="table">
+    {{- if $hasHeader -}}
+      <thead>
+        <tr>
+          {{- range (index $rows 0) -}}
+            <th scope="col">{{ . }}</th>
+          {{- end -}}
+        </tr>
+      </thead>
+    {{- end -}}
+    <tbody>
+      {{- $start := cond $hasHeader 1 0 -}}
+      {{- range $i, $row := $rows -}}
+        {{- if ge $i $start -}}
+          <tr>
+            {{- range $row -}}
+              <td>{{ . }}</td>
+            {{- end -}}
+          </tr>
+        {{- end -}}
+      {{- end -}}
+    </tbody>
+    {{- with $caption -}}
+      <caption>{{ . }}</caption>
+    {{- end -}}
+  </table>
+</div>

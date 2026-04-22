@@ -1,0 +1,57 @@
+// Project overrides
+
+// Rectangular avatar (About widget)
+.avatar.avatar-rect {
+  border-radius: 0 !important;
+  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+// Keep avatar crisp on retina by rendering a larger image and scaling down.
+// About widget avatar lives inside `#profile`.
+#profile img.avatar.avatar-rect {
+  width: 270px;
+  height: auto;
+}
+
+// Align About (biography) columns by removing the default top padding on #profile.
+// The theme adds `#profile { padding: 30px 10px; }` which visually pushes the avatar down.
+section#about.wg-about-biography #profile {
+  padding-top: 0;
+}
+
+// In the custom `biography` block, keep the theme's avatar padding,
+// but shift the whole right column down to align with the avatar top.
+@media (min-width: 992px) {
+  section#about.wg-biography > .container > .row > .col-12.col-lg-8 {
+    padding-top: 30px;
+  }
+}
+
+// About widget: add more vertical spacing between Interests items
+// so the Interests column height better matches the Education column.
+section#about.wg-about-biography ul.ul-interests > li,
+section#about.wg-biography ul.ul-interests > li {
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+section#about.wg-about-biography ul.ul-interests > li:last-child,
+section#about.wg-biography ul.ul-interests > li:last-child {
+  margin-bottom: 0;
+}
+
+// Hide the FontAwesome list icon in Interests (some theme versions render a coffee/book icon).
+section#about.wg-about-biography ul.ul-interests.fa-ul > li > .fa-li,
+section#about.wg-biography ul.ul-interests.fa-ul > li > .fa-li {
+  display: none;
+}
+
+// When hiding `.fa-li`, remove the extra left padding reserved for list icons.
+section#about.wg-about-biography ul.ul-interests.fa-ul,
+section#about.wg-biography ul.ul-interests.fa-ul {
+  padding-left: 0;
+}
+

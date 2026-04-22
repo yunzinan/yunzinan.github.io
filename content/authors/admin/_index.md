@@ -29,8 +29,8 @@ bio: My research interests include Software Engineering and Deep Learning. I use
 
 # Interests to show in About widget
 interests:
-  - Machine Learning
-  - Computational Neuroscience
+  - Generative AI
+  - Medical LLMs
   - Brain Computer Interface
 
 # Education to show in About widget

@@ -36,10 +36,9 @@ sections:
         gradient_end: '#1976d2'
         gradient_start: '#004ba0'
         text_color_light: true
-  - block: about.biography
+  - block: biography
     id: about
     content:
-      title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
   # - block: skills
@@ -240,6 +239,8 @@ sections:
       subtitle:
       text: |-
         Feel free to contact me if you have any questions. 😉
+      visit_tracker: |-
+        [![Visit tracker for Yunzinan.top](https://www.clustrmaps.com/map_v2.png?d=M9HxGk-HS6W9gxIzcVaqLqQpWLRZbqkyOjV6l0Slwp4)](https://www.clustrmaps.com/map/Yunzinan.top)
       # Contact (add or remove contact options as necessary)
       email: shen.ouy03@gmail.com
       phone: (+86) 133 7606 4311
@@ -248,7 +249,7 @@ sections:
         street: Tsinghua University, Haidian District 
         city: Beijing 
         region: 
-        postcode: 210023 <a href="http://www.clustrmaps.com/map/Yunzinan.top" title="Visit tracker for Yunzinan.top"><img src="//www.clustrmaps.com/map_v2.png?d=M9HxGk-HS6W9gxIzcVaqLqQpWLRZbqkyOjV6l0Slwp4" /></a>
+        postcode: 210023
 
         country: China
         country_code: CN

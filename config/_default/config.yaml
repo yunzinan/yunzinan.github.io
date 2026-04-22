@@ -21,9 +21,28 @@ removePathAccents: true
 
 module:
   imports:
+    # Pin SEO module to a version compatible with recent Hugo releases.
+    - path: github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-seo
+      version: v0.2.0
     - path: github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify
     - path: github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-reveal
     - path: github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy/v5
+  # Ensure this project’s local files are mounted so local overrides work.
+  mounts:
+    - source: content
+      target: content
+    - source: data
+      target: data
+    - source: layouts
+      target: layouts
+    - source: i18n
+      target: i18n
+    - source: archetypes
+      target: archetypes
+    - source: assets
+      target: assets
+    - source: static
+      target: static
 
 ############################
 ## ADVANCED

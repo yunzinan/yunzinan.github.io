@@ -1,0 +1,30 @@
+{{- /*
+Fix compatibility with recent Hugo versions where `.Site.GoogleAnalytics` was removed.
+
+We support either Hugo's built-in config (`services.googleAnalytics.ID`) or the legacy Wowchemy param
+(`params.marketing.analytics.google_analytics`).
+*/ -}}
+
+{{- $id := "" -}}
+
+{{- with site.Config.Services.GoogleAnalytics.ID -}}
+  {{- $id = . -}}
+{{- end -}}
+
+{{- if not $id -}}
+  {{- with site.Params.marketing.analytics.google_analytics -}}
+    {{- $id = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $id -}}
+  {{- /* Minimal gtag include (keeps theme logic working, but only when ID is set). */ -}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ $id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ $id }}');
+  </script>
+{{- end -}}
+
