@@ -30,7 +30,7 @@ bio: My research interests include Software Engineering and Deep Learning. I use
 # Interests to show in About widget
 interests:
   - Generative AI
-  - Medical LLMs
+  - Medical LLM
   - Brain Computer Interface
 
 # Education to show in About widget
