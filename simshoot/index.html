@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SimShoot: Edit the Shoot, Not the Shot — Aesthetic Portrait Reshooting with Video Action Simulators.">
+  <title>SimShoot: Edit the Shoot, Not the Shot</title>
+  <link rel="canonical" href="https://yunzinan.github.io/simshoot/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimShoot">
+  <meta property="og:title" content="SimShoot: Edit the Shoot, Not the Shot">
+  <meta property="og:description" content="Aesthetic Portrait Reshooting with Video Action Simulators — turning precise edit-extent control into visual frame selection along a continuous simulated transition.">
+  <meta property="og:url" content="https://yunzinan.github.io/simshoot/">
+  <meta property="og:image" content="https://yunzinan.github.io/simshoot/assets/media/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SimShoot: Edit the Shoot, Not the Shot">
+  <meta name="twitter:description" content="Aesthetic Portrait Reshooting with Video Action Simulators — interactive closed-loop reshooting with 7 single-action LoRA video adapters.">
+  <meta name="twitter:image" content="https://yunzinan.github.io/simshoot/assets/media/og-preview.jpg">
+  <link rel="icon" href="assets/media/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/katex/katex.min.css?v=5">
+  <link rel="stylesheet" href="assets/style.css?v=5">
+  <link rel="stylesheet" href="assets/project.css?v=8">
+  <script src="assets/katex/katex.min.js?v=5" defer></script>
+  <script src="assets/katex/auto-render.min.js?v=5" defer></script>
+  <script src="assets/data.js?v=5" defer></script>
+  <script src="assets/app.js?v=5" defer></script>
+  <script src="assets/project.js?v=7" defer></script>
+</head>
+<body>
+
+  <!-- STICKY TOP NAVIGATION -->
+  <nav class="sticky-nav" id="sticky-nav" aria-label="Primary sections">
+    <div class="sticky-nav-inner">
+      <a class="sticky-brand" href="#top" aria-label="SimShoot home">
+        <img src="assets/media/simshoot-logo.svg" alt="SimShoot">
+      </a>
+      <div class="sticky-links" id="sticky-links">
+        <a href="#sec-video">Video</a>
+        <a href="#sec-abstract">Abstract</a>
+        <a href="#sec-method">Workflow</a>
+        <a href="#sec-runs">Walkthroughs</a>
+        <a href="#sec-results">Results</a>
+        <a href="#sec-lora">Data &amp; LoRAs</a>
+        <a href="#sec-selector">Ablations</a>
+        <a href="#sec-bibtex">BibTeX</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PUBLIC ACADEMIC HERO -->
+  <header class="hero-header project-hero" id="top">
+    <div class="container">
+      <div class="hero-brand">
+        <img src="assets/media/simshoot-logo.svg" alt="SimShoot" class="hero-logo">
+      </div>
+      <h1 class="publication-title">
+        Edit the Shoot, Not the Shot:<br>
+        Aesthetic Portrait Reshooting with<br>
+        Video Action Simulators
+      </h1>
+
+      <!-- Authors & Affiliations -->
+      <div class="author-list" aria-label="Authors">
+        <span class="author-item">Shen Ou-Yang<sup class="author-sup">1</sup></span>
+        <span class="author-item">Dong Chen<sup class="author-sup">2</sup></span>
+        <span class="author-item">Xianhui Lin<sup class="author-sup">3</sup></span>
+        <span class="author-item">Xiaoming Li<sup class="author-sup">2</sup></span>
+      </div>
+      <div class="affiliation-list" aria-label="Affiliations">
+        <span class="affiliation-item"><sup>1</sup>Tsinghua University</span>
+        <span class="affiliation-item"><sup>2</sup>Nanjing University</span>
+        <span class="affiliation-item"><sup>3</sup>Vivo</span>
+      </div>
+
+      <!-- Resource Buttons -->
+      <div class="resource-links" aria-label="Project resources">
+        <span class="pub-btn resource-btn soon" title="arXiv preprint coming soon" aria-disabled="true">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3.5 2.5h6l3 3v8h-9v-11z"/><path d="M9.5 2.5v3h3"/><path d="M5.5 8h5M5.5 10.5h3.5"/></svg>
+          <span>arXiv</span>
+          <span class="soon-pill">Coming Soon</span>
+        </span>
+        <span class="pub-btn resource-btn soon" title="Code repository coming soon" aria-disabled="true">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.2a6.8 6.8 0 0 0-2.15 13.25c.34.06.46-.15.46-.33v-1.26c-1.88.41-2.28-.8-2.28-.8-.31-.78-.75-.99-.75-.99-.62-.42.05-.41.05-.41.68.05 1.04.7 1.04.7.61 1.04 1.59.74 1.98.56.06-.44.24-.74.43-.91-1.5-.17-3.08-.75-3.08-3.34 0-.74.26-1.34.7-1.82-.07-.17-.3-.86.07-1.79 0 0 .57-.18 1.87.69a6.5 6.5 0 0 1 3.4 0c1.3-.87 1.87-.69 1.87-.69.37.93.14 1.62.07 1.79.43.48.7 1.08.7 1.82 0 2.6-1.58 3.17-3.09 3.33.24.21.46.63.46 1.27v1.88c0 .18.12.4.47.33A6.8 6.8 0 0 0 8 1.2Z"/></svg>
+          <span>Code</span>
+          <span class="soon-pill">Coming Soon</span>
+        </span>
+        <span class="pub-btn resource-btn soon" title="Pretrained Action LoRA checkpoints coming soon" aria-disabled="true">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2 13.5 5v6L8 14 2.5 11V5L8 2Z"/><path d="M2.5 5 8 8l5.5-3M8 8v6"/></svg>
+          <span>Models</span>
+          <span class="soon-pill">Coming Soon</span>
+        </span>
+        <span class="pub-btn resource-btn soon" title="Training dataset pipelines coming soon" aria-disabled="true">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="8" cy="4" rx="5" ry="2"/><path d="M3 4v8c0 1.1 2.24 2 5 2s5-.9 5-2V4"/><path d="M3 8c0 1.1 2.24 2 5 2s5-.9 5-2"/></svg>
+          <span>Dataset</span>
+          <span class="soon-pill">Coming Soon</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- DEMONSTRATION VIDEO BAND -->
+  <section class="section-band light" id="sec-video">
+    <div class="container narrow">
+      <div class="video-frame">
+        <video id="method-video" controls playsinline preload="metadata" poster="assets/media/demo-poster.jpg">
+          <source src="assets/media/simshoot-demonstration.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABSTRACT -->
+  <section class="section-band" id="sec-abstract">
+    <div class="container">
+      <h2 class="section-title">Abstract</h2>
+      <div class="tldr-box">
+        <span class="tldr-label">TL;DR</span>
+        <strong>SimShoot</strong> reformulates aesthetic portrait reshooting as interactive photographic action planning with a video diffusion action simulator&mdash;turning precise edit-extent control into visual frame selection along a continuous simulated transition.
+      </div>
+      <div class="abstract-body">
+        <p>
+          <strong>Aesthetic portrait reshooting</strong> aims to improve portrait aesthetics through adjustments available during a photoshoot, including camera control, pose, expression, and lighting.
+          Existing image editors can produce appealing outputs without faithfully realizing requested photographic changes, while their single-image outputs make execution extent difficult to control.
+        </p>
+        <p>
+          We propose <strong>SimShoot</strong>, which couples a vision-language planner and selector with a video diffusion model adapted as a photographic action simulator.
+          For each proposed adjustment, the simulator generates a gradual transition from the current portrait, exposing outcomes at different execution extents as the action unfolds across successive video frames.
+          The selector chooses a suitable frame, and the selected portrait and visual feedback guide subsequent planning.
+        </p>
+        <p>
+          We construct single-action training videos using rendered camera trajectories (<strong>BlenderSynth</strong>), endpoint-conditioned portrait generation (<strong>RealSynth</strong>), and a separate linear-light synthesis route for relighting.
+          In both open-ended and targeted reshooting, SimShoot surpasses the evaluated reshooting and open-weight editing baselines on portrait-specific aesthetic metrics.
+          It achieves aesthetic performance comparable to the proprietary Nano Banana 2.1 in open-ended reshooting and surpasses it across all evaluated aesthetic metrics in targeted reshooting.
+          SimShoot also achieves the strongest instruction following among all compared methods.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="hr"></div>
+
+  <!-- METHOD OVERVIEW / WORKFLOW -->
+  <section class="section-band" id="sec-method">
+    <div class="container">
+      <h2 class="section-title">Method Overview</h2>
+      <p class="section-desc">
+        Instead of editing a portrait in a single opaque pass, <strong>SimShoot</strong> separates <em>which</em> photographic action to take from <em>how far</em> to execute it&mdash;coordinating three modules across an iterative closed loop.
+      </p>
+
+      <!-- Workflow Figure -->
+      <figure class="workflow-figure">
+        <button type="button" class="zoom-btn" id="btn-workflow-zoom" aria-label="Zoom SimShoot workflow figure">
+          <img src="assets/media/simshoot-workflow.png" alt="SimShoot closed-loop workflow diagram showing Planner, Action Simulator with LoRA training, and Coarse-to-Fine Selector">
+        </button>
+        <figcaption class="workflow-caption">
+          <strong>SimShoot Closed-Loop Workflow.</strong>
+          Color-coded badges throughout the page map directly to this architecture:
+          <span class="mod-inline mod-full">End-to-End Pipeline</span>,
+          <span class="mod-inline mod-train">Dataset &amp; LoRA Training</span>,
+          <span class="mod-inline mod-selector">Selector</span>,
+          <span class="mod-inline mod-planner">Planner</span>, and
+          <span class="mod-inline mod-sim">Action Simulator</span>.
+          Click diagram to enlarge.
+        </figcaption>
+      </figure>
+
+      <!-- 3 Core Module Summary Cards -->
+      <div class="method-pills">
+        <div class="method-card planner">
+          <h3><span class="method-dot"></span>VLM Planner</h3>
+          <p>
+            Proposes one structured DSL photographic action \(a_t\) at a time (closed-set Camera &amp; Lighting, or open-vocabulary Pose &amp; Expression) conditioned on initial portrait \(I_0\), current state \(I_t\), optional goal \(u\), and cross-round feedback.
+          </p>
+        </div>
+        <div class="method-card simulator">
+          <h3><span class="method-dot"></span>VDM Action Simulator</h3>
+          <p>
+            A frozen MiniMax H3 video backbone paired with 7 single-action LoRA adapters (\(r = 16, \alpha = 16\)) rolls out \(c(a_t)\) from \(I_t\) as a continuous \(T = 39\)-frame transition \(V_t = (I_{t,0}, \dots, I_{t,T-1})\).
+          </p>
+        </div>
+        <div class="method-card selector">
+          <h3><span class="method-dot"></span>Coarse-to-Fine Selector</h3>
+          <p>
+            Inspects 5 evenly spaced frames \(\{F_0, F_{10}, F_{19}, F_{29}, F_{38}\}\) starting with unchanged \(I_t\), and optionally refines promising local intervals at zero extra video cost to choose \(I_{t+1}\)&mdash;or rejects and retains \(I_t\).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="hr"></div>
+
+  <!-- INTERACTIVE MULTI-ROUND RESHOOTING WALKTHROUGHS -->
+  <section class="section-band" id="sec-runs">
+    <div class="container">
+      <div class="module-badge-wrap">
+        <span class="module-badge mod-full">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.26416 12.5C3.52329 17.0998 7.33543 20.75 12.0001 20.75C16.8326 20.75 20.7501 16.8325 20.7501 12C20.7501 7.16751 16.8326 3.25 12.0001 3.25C8.41206 3.25 5.32841 5.40967 3.97819 8.5M3.50011 4.5V8.5H7.50011M12.0001 8V12L14.5001 14.5"/></svg>
+          <span>End-to-End Pipeline &middot; Planner + Simulator + Selector</span>
+        </span>
+      </div>
+      <h2 class="section-title">Interactive Multi-Round Reshooting Walkthroughs</h2>
+      <p class="section-desc">
+        Step through real closed-loop rollouts round by round&mdash;mirroring the demonstration video interactively.
+        Watch or scrub each full <strong>39-frame simulation video</strong> live beside its synchronized coarse-to-fine <strong>Selector filmstrip</strong>, click any candidate frame to jump straight to that moment, and trace how SimShoot handles interval refinement, rejection recovery with <code>retry_note</code>, and voluntary stopping across complete 3-edit runs.
+      </p>
+      <div class="tab-bar" id="runs-tabs" role="tablist" aria-label="Select complete run"></div>
+      <div id="runs-stage"></div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="hr"></div>
+
+  <!-- QUANTITATIVE & HUMAN EVALUATION RESULTS -->
+  <section class="section-band" id="sec-results">
+    <div class="container">
+      <h2 class="section-title">Quantitative Results &amp; Human Evaluation</h2>
+      <p class="section-desc">
+        Evaluated across 240 portraits (120 open-ended, 120 targeted) using six automatic aesthetic metrics, three VLM instruction judges, fixed-capture background preservation, and an independent crowd study (12,000 preference votes &amp; 18,480 per-action completion judgments).
+      </p>
+
+      <!-- Highlight KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-val">+15.47%</div>
+          <div class="kpi-label">Open-Ended Structure Gain</div>
+          <div class="kpi-sub">1st on PortraitAes-S, PhotoFramer (+5.10%), &amp; Q-Align (+10.15%)</div>
+        </div>
+        <div class="kpi-card emerald">
+          <div class="kpi-val">+10.16%</div>
+          <div class="kpi-label">Targeted Structure Gain</div>
+          <div class="kpi-sub">1st on all three PortraitAes dimensions; beats Nano Banana 2.1 on all 6 metrics</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">83.71%</div>
+          <div class="kpi-label">Instruction Following (#1)</div>
+          <div class="kpi-sub">+8.31 pp over runner-up FLUX 3 Klein; 1st under all 3 VLM judges</div>
+        </div>
+        <div class="kpi-card terra">
+          <div class="kpi-val">54.9–60.8%</div>
+          <div class="kpi-label">Human Preference Win Rate</div>
+          <div class="kpi-sub">Significant wins over 4/5 baselines (\(p &lt; 0.001\)); parity vs. Nano Banana 2.1 (49.7%)</div>
+        </div>
+      </div>
+
+      <div id="results-root"></div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="hr"></div>
+
+  <!-- DATASET CRAFTING & ACTION LORA TRAINING -->
+  <section class="section-band" id="sec-lora">
+    <div class="container" id="sec-dataset">
+      <div class="module-badge-wrap">
+        <span class="module-badge mod-train">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22C16.4183 22 20 18.6048 20 14.4167C20 8.45833 12 2.5 12 2.5C12 2.5 4 8.45833 4 14.4167C4 18.6048 7.58173 22 12 22ZM12 22C14.2091 22 16 20.2589 16 18.1111C16 15.0556 12 12 12 12C12 12 8 15.0556 8 18.1111C8 20.2589 9.79086 22 12 22Z"/></svg>
+          <span>Dataset Crafting &amp; Action LoRA Training</span>
+        </span>
+      </div>
+      <h2 class="section-title">Dataset Crafting &amp; Action LoRA Training</h2>
+      <p class="section-desc">
+        To specialize a frozen video diffusion backbone (MiniMax H3) for faithful photographic execution and action isolation, we construct single-action training samples \(\mathcal{D} = \{(I_{i,0},\, c(a_i),\, V_i)\}_{i=1}^{N}\) with \(T = 39\)-frame transitions across <strong>65 DSL primitives (98 parameterized variants)</strong> via three complementary routes&mdash;<strong>BlenderSynth</strong>, <strong>RealSynth</strong>, and <strong>Linear-Light Synthesis</strong>&mdash;paired with automated screening, visual review, and progress-aware temporal sampling.
+      </p>
+
+      <figure class="workflow-figure">
+        <button type="button" class="zoom-btn" id="btn-dataset-zoom" aria-label="Zoom SimShoot dataset construction figure">
+          <img src="assets/media/simshoot-dataset.png" alt="Dataset construction overview showing BlenderSynth camera trajectories, RealSynth endpoint-conditioned generation, direct linear-light relighting synthesis, and progress-aware sampling">
+        </button>
+        <figcaption class="workflow-caption">
+          <strong>Dataset Construction Overview.</strong>
+          (a) <em>BlenderSynth</em> renders physically accurate camera orbit, translation, and zoom trajectories across 20 rigid objects and 10 scenes;
+          (b) <em>RealSynth</em> verifies edited portrait endpoints and RealBokeh pairs before generating transitions via first-and-last-frame conditioning;
+          (c) <em>Lighting</em> blends verified relit endpoints in linear-light RGB;
+          (d) <em>Progress-aware sampling</em> allocates frames evenly across visual change. Click to enlarge.
+        </figcaption>
+      </figure>
+
+      <div class="dataset-stats-grid" aria-label="Dataset summary statistics">
+        <div class="stat-mini">
+          <div class="stat-mini-val">7</div>
+          <div class="stat-mini-lbl">Single-Action LoRA Adapters</div>
+        </div>
+        <div class="stat-mini">
+          <div class="stat-mini-val">65 / 98</div>
+          <div class="stat-mini-lbl">DSL Primitives / Variants</div>
+        </div>
+        <div class="stat-mini">
+          <div class="stat-mini-val">1,258</div>
+          <div class="stat-mini-lbl">Verified 39-Frame Train Clips</div>
+        </div>
+        <div class="stat-mini">
+          <div class="stat-mini-val">142 / 133</div>
+          <div class="stat-mini-lbl">Held-Out Val / Test Clips</div>
+        </div>
+      </div>
+
+      <hr class="hr subtle">
+
+      <div class="subsection" id="sec-lora-eval">
+        <h3 class="subsection-title">7 Trained Action LoRAs vs. Pretrained Video Simulator</h3>
+        <p class="subsection-desc">
+          We compare <strong>SimShoot (H3 + Action LoRA)</strong> against <strong>Native H3 (w/o LoRA)</strong> across all 7 photographic action adapters using identical input portraits, action prompts, and seeds.
+          Watch the synchronized 39-frame rollouts to see how pretrained H3 frequently ignores optical/camera commands, introduces off-target drift, or produces insufficient motion extent, whereas our single-action LoRAs execute each adjustment cleanly.
+        </p>
+        <div class="ablation-metrics-strip">
+          <span class="ab-pill accent">Overall Acceptance: <strong>82.3%</strong> vs. 59.4% (+22.9 pp)</span>
+          <span class="ab-pill"><code>cam_dof</code>: <strong>+62.1 pp</strong></span>
+          <span class="ab-pill"><code>cam_translate</code>: <strong>+43.1 pp</strong></span>
+          <span class="ab-pill">Rejected Rollouts: <strong>\(3.1\times\) fewer</strong> (140 vs. 436)</span>
+          <span class="ab-pill">Bg PSNR: <strong>+3.07 dB</strong></span>
+        </div>
+        <div class="tab-bar" id="lora-tabs" role="tablist" aria-label="Select action adapter"></div>
+        <div id="lora-stage"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="hr"></div>
+
+  <!-- ABLATION 1: FRAME SELECTOR -->
+  <section class="section-band" id="sec-selector">
+    <div class="container">
+      <div class="module-badge-wrap">
+        <span class="module-badge mod-selector">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4H9M20 9V4H15M4 15V20H9M20 15V20H15M13.6035 13.6035L15.75 15.75M14.75 11.25C14.75 12.9069 13.4069 14.25 11.75 14.25C10.0931 14.25 8.75 12.9069 8.75 11.25C8.75 9.59315 10.0931 8.25 11.75 8.25C13.4069 8.25 14.75 9.59315 14.75 11.25Z"/></svg>
+          <span>Ablation 1 &middot; Selector (Action-Extent Selection)</span>
+        </span>
+      </div>
+      <h2 class="section-title">Coarse-to-Fine Frame Selection vs. Terminal Frame Only</h2>
+      <p class="section-desc">
+        <strong>What we ablate:</strong> SimShoot's VLM frame-selection mechanism that controls <em>how far</em> a simulated action should go.
+        Given the exact same 39-frame trajectory, we compare committing blindly to the final frame (<strong>w/o Selector &middot; Forced \(F_{38}\)</strong>) against <strong>SimShoot's Two-Stage Selector</strong>, which inspects 5 coarse frames and refines the best local interval at zero extra video generation cost&mdash;avoiding overshoot and late-frame artifacts.
+      </p>
+      <div class="ablation-metrics-strip">
+        <span class="ab-pill accent">Interior Frames Chosen: <strong>82.8%</strong> (\(F_1\text{--}F_{37}\))</span>
+        <span class="ab-pill">Decisions Changed vs. Terminal-Only: <strong>71.7%</strong> (172/240)</span>
+        <span class="ab-pill">Single-Round Structure: <strong>+2.48 pp</strong></span>
+        <span class="ab-pill">Refined Frame Adoption: <strong>67.4%</strong> at 0 extra GPU cost</span>
+      </div>
+      <div class="tab-bar" id="b2-tabs" role="tablist" aria-label="Select frame-selection case"></div>
+      <div id="b2-stage"></div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="hr"></div>
+
+  <!-- ABLATION 2: ADAPTIVE REPLANNING -->
+  <section class="section-band" id="sec-replan">
+    <div class="container">
+      <div class="module-badge-wrap">
+        <span class="module-badge mod-planner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.2003 2.79553C15.8175 3.1709 18.6855 5.82178 19.0824 9.15718L21.5001 12.6499L19.132 13.5693V18.0499H15.224V20.7499H6.43108V18.2662C6.43108 14.5352 4.2549 14.4032 3.65283 11.5568M6.5 2.75L6.8395 3.47746C7.23684 4.32882 7.92118 5.01316 8.77254 5.4105L9.5 5.75L8.77254 6.0895C7.92118 6.48684 7.23684 7.17118 6.83951 8.02254L6.5 8.75L6.1605 8.02254C5.76316 7.17118 5.07882 6.48684 4.22746 6.08951L3.5 5.75L4.22746 5.4105C5.07882 5.01316 5.76316 4.32882 6.1605 3.47746L6.5 2.75Z"/></svg>
+          <span>Ablation 2 &middot; Planner (Closed-Loop Replanning)</span>
+        </span>
+      </div>
+      <h2 class="section-title">Adaptive Closed-Loop Replanning vs. Fixed Initial Sequence</h2>
+      <div class="section-desc">
+        <p>
+          <strong>What we ablate:</strong> Closed-loop feedback in the VLM <strong>Planner</strong>.
+          Starting from the exact same initial plan, we compare executing that plan open-loop (<strong>Fixed Initial Plan</strong>) against <strong>SimShoot Adaptive Replanning</strong>, which inspects each intermediate portrait and selection outcome before deciding the next round. Closed-loop planning yields two key benefits:
+        </p>
+        <ul class="desc-points">
+          <li><strong>(1) Dynamic Plan Adaptation:</strong> adding emergent refinements or revising the action sequence after observing the realized intermediate portrait.</li>
+          <li><strong>(2) Failure Resilience &amp; Redundancy Avoidance:</strong> diagnosing rejected actions to rewrite them with explicit preservation constraints, or stopping early once the goal is already satisfied.</li>
+        </ul>
+      </div>
+      <div class="ablation-metrics-strip">
+        <span class="ab-pill accent">Sequences Adapted: <strong>77.1%</strong> (185/240)</span>
+        <span class="ab-pill">Open-Ended Family Shifts: <strong>45.0%</strong></span>
+        <span class="ab-pill">Open-Ended Structure: <strong>+14.68%</strong> vs. +11.77%</span>
+        <span class="ab-pill">Q-Align: <strong>+10.14%</strong> vs. +8.83%</span>
+      </div>
+      <div class="grouped-tabs" id="b3-tabs" role="tablist" aria-label="Select replanning case"></div>
+      <div id="b3-stage"></div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="hr"></div>
+
+  <!-- ABLATION 3: VIDEO SIMULATOR VS. IMAGE EDITORS -->
+  <section class="section-band" id="sec-executor">
+    <div class="container">
+      <div class="module-badge-wrap">
+        <span class="module-badge mod-sim">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.5312 4H4V20H20V12.4688M15.5 12L9.5 15.5L9.5 8.5L15.5 12ZM18 3L18.3395 3.72746C18.7368 4.57882 19.4212 5.26316 20.2725 5.6605L21 6L20.2725 6.3395C19.4212 6.73684 18.7368 7.42118 18.3395 8.27254L18 9L17.6605 8.27254C17.2632 7.42118 16.5788 6.73684 15.7275 6.33951L15 6L15.7275 5.6605C16.5788 5.26316 17.2632 4.57882 17.6605 3.72746L18 3Z"/></svg>
+          <span>Ablation 3 &middot; Action Simulator (Video vs. Image Modality)</span>
+        </span>
+      </div>
+      <h2 class="section-title">Video Action Simulator vs. Extent-Prompted Image Editors</h2>
+      <p class="section-desc">
+        <strong>What we ablate:</strong> Why simulate photographic actions with a continuous <strong>Video Diffusion Model (VDM)</strong> instead of prompting an <strong>Image Editing Model</strong> at discrete target extents?
+        Holding the Planner and Selector loop fixed, we replace our VDM Action Simulator with <strong>FLUX 3 Klein</strong> and <strong>Qwen-Image 2.1</strong> (prompted at nominal progress \(0\%\text{--}100\%\)), exposing two structural gaps below: <strong>non-monotonic single-step progression</strong> and <strong>multi-round cumulative drift</strong>.
+      </p>
+      <div class="ablation-metrics-strip">
+        <span class="ab-pill accent">Ordered Pairs: <strong>89.7%</strong> (0 reversals) vs. 45.6% / 34.9%</span>
+        <span class="ab-pill">Strictly Ordered Actions: <strong>31/42</strong> vs. 3/42 &amp; 4/42</span>
+        <span class="ab-pill">Multi-Round Structure Gain: <strong>+7.4 to +12.4 pp</strong> over image editors</span>
+      </div>
+
+      <!-- 3.1 Single-Step Monotonicity -->
+      <div class="subsection" id="sec-executor-mono">
+        <h3 class="subsection-title">Single-Step Extent Monotonicity (In-Place Synchronized Playback)</h3>
+        <p class="subsection-desc">
+          All three executors animate in place simultaneously across \(F_0 \to F_{10} \to F_{19} \to F_{29} \to F_{38}\) (\(0\% \to 100\%\) requested extent).
+          Compare smooth continuous progression in SimShoot against non-monotonic jumps, reversal, or scene flicker in independent image edits.
+        </p>
+        <div class="tab-bar" id="b4a-tabs" role="tablist" aria-label="Select single-step action"></div>
+        <div id="b4a-stage"></div>
+      </div>
+
+      <hr class="hr subtle">
+
+      <!-- 3.2 Multi-Round Cumulative Drift -->
+      <div class="subsection" id="sec-executor-drift">
+        <h3 class="subsection-title">Multi-Round Cumulative Drift &amp; Structural Degradation</h3>
+        <p class="subsection-desc">
+          Starting from the exact same portrait \(S_0\), step through each executor's states in place (\(S_0 \to S_1 \to S_2 \to \text{Final}\)) via each card's arrows or state pills to directly observe cumulative facial, clothing, and background drift.
+        </p>
+        <div class="tab-bar" id="b4b-tabs" role="tablist" aria-label="Select multi-round trajectory"></div>
+        <div id="b4b-stage"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="hr"></div>
+
+  <!-- BIBTEX CITATION -->
+  <section class="section-band" id="sec-bibtex">
+    <div class="container">
+      <h2 class="section-title">BibTeX</h2>
+      <p class="section-desc">
+        If you find <strong>SimShoot</strong> useful in your research, please consider citing our work.
+      </p>
+      <div class="bibtex-box">
+        <div class="bibtex-head">
+          <span>Citation</span>
+          <button type="button" class="copy-btn" id="btn-copy-bibtex">Copy BibTeX</button>
+        </div>
+        <pre class="bibtex-pre" id="bibtex-code">@article{ouyang2026simshoot,
+  title     = {Edit the Shoot, Not the Shot: Aesthetic Portrait Reshooting with Video Action Simulators},
+  author    = {Ou-Yang, Shen and Chen, Dong and Lin, Xianhui and Li, Xiaoming},
+  journal   = {arXiv preprint},
+  year      = {2026}
+}</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container narrow">
+      <p>
+        <strong>SimShoot</strong> &middot; Shen Ou-Yang, Dong Chen, Xianhui Lin, and Xiaoming Li.<br>
+        Project page for <em>Edit the Shoot, Not the Shot: Aesthetic Portrait Reshooting with Video Action Simulators</em>.
+      </p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top" id="back-top" aria-label="Back to top">&uarr; Top</a>
+
+  <!-- Image Lightbox Modal -->
+  <dialog id="lightbox" class="lb-dialog" aria-labelledby="lb-title">
+    <div class="lb-head">
+      <span id="lb-title" class="lb-title">Preview</span>
+      <div class="lb-controls">
+        <button type="button" class="ctrl-btn" id="lb-prev">&larr; Prev</button>
+        <span class="mono lb-counter" id="lb-counter"></span>
+        <button type="button" class="ctrl-btn" id="lb-next">Next &rarr;</button>
+        <button type="button" class="ctrl-btn" id="lb-close">Close</button>
+      </div>
+    </div>
+    <div class="lb-body">
+      <img id="lb-img" alt="">
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
+  </dialog>
+
+</body>
+</html>

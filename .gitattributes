@@ -1,0 +1,6 @@
+*.png -filter -diff -merge text=false
+*.jpg -filter -diff -merge text=false
+*.jpeg -filter -diff -merge text=false
+*.svg text eol=lf
+*.mp4 -filter -diff -merge text=false
+*.woff2 -filter -diff -merge text=false
